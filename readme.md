@@ -9,6 +9,7 @@ The dataset used in this project is titled `total_netflix_2023.csv` and includes
 
 ## Repository Structure
 Netflix-Dataset-Analysis-2023/
+
 │
 ├── data/
 │   ├── processed/
@@ -43,6 +44,8 @@ Netflix-Dataset-Analysis-2023/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+
+
 
 # Project File Structure
 
@@ -115,8 +118,6 @@ Utility functions used across the project.
    ```
 
 ## Analysis Highlights
-- Based on the bar chart provided, which appears to show the total number of titles released on Netflix each year, here are some observations:
-
 Analyzing the Evolution of Content Volume on Netflix: A Decade of Expansion and a Pivotal Decline in 2023
 
 1. **Growth Trend**: There is a noticeable growth trend in the number of titles released each year from 2010 through 2021. This suggests an aggressive expansion of content on the platform over the years.
