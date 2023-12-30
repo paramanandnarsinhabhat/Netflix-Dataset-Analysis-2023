@@ -32,3 +32,10 @@ missing_values_after_conversion = netflix_df.isnull().sum()
 
 print(transformed_head)
 print(missing_values_after_conversion)
+
+# Step 3: Handle Missing Values
+# For numeric columns with very few missing values, we'll fill them with the median
+numeric_columns = ['Hours Viewed', 'Number of Ratings', 'Rating']
+for column in numeric_columns:
+    median_value = netflix_df[column].median()
+    netflix_df[column].fillna(median_value, inplace=True)
