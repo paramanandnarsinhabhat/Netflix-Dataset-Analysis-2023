@@ -78,6 +78,21 @@ Analyzing the Evolution of Content Volume on Netflix: A Decade of Expansion and 
 
 6. **Initial Years**: The very low numbers in the initial years (2010-2013) indicate the early stages of Netflix's content library when it was probably transitioning from a DVD rental service to a streaming platform.
 
+ "Stability in Viewer Ratings on Netflix Over Fourteen Years"
+
+
+1. **Consistent Median Ratings**: The median ratings (indicated by the line within each box) remain relatively stable over the years, hovering around the 7 to 8 range. This suggests a consistent level of content quality as perceived by viewers throughout the time period analyzed.
+
+2. **Interquartile Range**: The interquartile range (IQR), represented by the height of each box, is fairly consistent, suggesting similar variability in ratings year over year. This implies that Netflix has maintained a stable content satisfaction level among its viewers.
+
+3. **Outliers**: There are a few outliers each year, particularly on the lower end of the rating scale, indicating that while most content is well-received, there are always a few titles with significantly lower ratings.
+
+4. **Slight Increase in Rating Variability**: In recent years, the 'whiskers' of the box plot, which indicate the range of the data excluding outliers, seem to extend slightly further than in earlier years, particularly the lower whisker. This could mean a broader diversity in content reception, with more titles having lower ratings.
+
+5. **High-Rating Outliers**: There are occasional outliers on the high end of the rating scale, particularly in the earlier years, which suggests that there were some exceptionally well-received titles during those years.
+
+6. **Overall Rating Quality**: The bulk of the content each year is rated between 6 and 9, which indicates a generally positive reception of Netflix content by its viewers.
+
 
 
 
