@@ -29,3 +29,6 @@ transformed_head = netflix_df.head()
 
 # We also check for any null values which may have been introduced during conversion
 missing_values_after_conversion = netflix_df.isnull().sum()
+
+print(transformed_head)
+print(missing_values_after_conversion)
