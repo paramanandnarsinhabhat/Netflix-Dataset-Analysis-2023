@@ -22,6 +22,16 @@ def standardize_and_clean_data(df):
     df['Description'] = df['Description'].str.strip()
     return df
 
+def handle_missing_values(df):
+    for column in ['Hours Viewed', 'Number of Ratings', 'Rating']:
+        df[column].fillna(df[column].median(), inplace=True)
+    df['Year'].fillna(-1, inplace=True)
+    df['Month'].fillna(-1, inplace=True)
+    df['Day'].fillna(-1, inplace=True)
+    return df
+    
+def validate_data(df):
+    return df[(df['Rating'].between(0, 10)) & (df['Hours Viewed'] >= 0) & (df['Number of Ratings'] >= 0)]
 
 
 
