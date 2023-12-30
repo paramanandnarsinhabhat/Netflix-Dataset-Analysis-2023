@@ -11,11 +11,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 plt.figure(figsize=(14, 7))
-sns.boxplot(x='Primary Genre', y='Hours Viewed', data=netflix_df)
-plt.title('Distribution of Viewership Hours by Genre')
+sns.boxplot(x='Primary Genre', y='Rating', data=netflix_df)
+plt.title('Distribution of Ratings by Genre')
 plt.xlabel('Genre')
-plt.ylabel('Viewership Hours')
+plt.ylabel('Rating')
 plt.xticks(rotation=45)
 plt.show()
-
-
