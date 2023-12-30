@@ -1,8 +1,8 @@
 
-# Netflix Dataset Analysis 2023
+# Netflix Dataset Analysis 
 
 ## Project Overview
-This project focuses on analyzing the Netflix dataset for the year 2023. The analysis covers various aspects such as viewership trends, ratings, and content preferences globally. The goal is to derive meaningful insights that can help understand viewer behavior and preferences.
+This project focuses on analyzing the Netflix dataset for the year 2010 to 2023. The analysis covers various aspects such as viewership trends, ratings, and content preferences globally. The goal is to derive meaningful insights that can help understand viewer behavior and preferences.
 
 ## Data Source
 The dataset used in this project is titled `total_netflix_2023.csv` and includes information on various Netflix titles, their release dates, viewership hours, ratings, and other relevant details.
