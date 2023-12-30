@@ -161,6 +161,30 @@ Evolving Trends in Genre Popularity on Netflix from 2010 to 2023
 
 
 
+Disparities in Genre Watch-Time: An In-Depth Look at Netflix Viewership Hours
+
+
+1. **High Variance in Viewership**: There is a substantial variance in viewership hours across different genres, with some genres showing a significantly wider range of hours watched. This suggests that certain genres may have a few standout titles with exceptionally high viewership that drive up the total hours.
+
+2. **Popular Genres**: Some genres, such as 'Drama' and 'Comedy', have numerous data points spread across a range of viewership hours, indicating a broad appeal and consistent production of content in these categories.
+
+3. **Outliers Indicating Blockbusters**: There are notable outliers in genres like 'Action' and 'Adventure', which may correspond to blockbuster titles with high viewership. Such outliers could significantly influence the average viewership hours for their respective genres.
+
+4. **Lower Average Viewership in Niche Genres**: Genres such as 'Documentary', 'Musical', and 'Western' appear to have fewer titles with high viewership hours, which could indicate a more niche audience or less frequent production of high-impact titles in these categories.
+
+5. **Consistency Among Certain Genres**: Genres such as 'Crime' and 'Horror' show a consistent cluster of viewership hours, suggesting a steady audience engagement without extreme peaks in viewership.
+
+6. **Potential for Audience Expansion**: The genres with lower viewership hours present an opportunity for Netflix to expand its audience by investing in content that can attract more viewers or by promoting existing content to wider audiences.
+
+7. **Strategic Content Placement**: The distribution of viewership hours by genre could inform Netflix's content strategy, highlighting which genres might benefit from further investment and development.
+
+
+
+
+
+
+
+
 ## Contributing
 Contributions to this project are welcome. Please feel free to fork the repository and submit pull requests.
 
