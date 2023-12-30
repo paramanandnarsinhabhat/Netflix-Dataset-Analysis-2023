@@ -33,6 +33,11 @@ def handle_missing_values(df):
 def validate_data(df):
     return df[(df['Rating'].between(0, 10)) & (df['Hours Viewed'] >= 0) & (df['Number of Ratings'] >= 0)]
 
+def extract_date_components(df):
+    df['Year'] = df['Release Date'].dt.year
+    df['Month'] = df['Release Date'].dt.month
+    df['Day'] = df['Release Date'].dt.day
+    return df
 
 
 

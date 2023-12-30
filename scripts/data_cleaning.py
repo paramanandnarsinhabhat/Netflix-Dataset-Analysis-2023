@@ -21,5 +21,6 @@ netflix_df = handle_missing_values(netflix_df)
 #Step 4: Validate Data Function
 netflix_df = validate_data(netflix_df)
 
-
+#Step 5 : Extract the date components to Extract Additional Information Function
+netflix_df = extract_date_components(netflix_df)
 
