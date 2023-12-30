@@ -4,7 +4,7 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from utils.data_utils import load_data,convert_data_types
+from utils.data_utils import load_data,convert_data_types,standardize_and_clean_data
 
 file_path = '/Users/paramanandbhat/Downloads/total_netflix_2023 new.csv'
 
@@ -45,15 +45,7 @@ for column in numeric_columns:
 # They could be imputed later if they are required for time-series analysis
 # Step 4: Clean Genre Column
 # We'll define a function to parse the 'Genre' column into actual lists
-def parse_genre(genre_str):
-    # Removing quotes and square brackets
-    genre_str = genre_str.strip("[]")
-    # Splitting the string into a list at commas not followed by a space (to avoid splitting on commas within genres)
-    genres = [genre.strip("' ") for genre in genre_str.split(",")]
-    return genres
-
-# Apply the parsing function to the 'Genre' column
-netflix_df['Genre'] = netflix_df['Genre'].apply(parse_genre)
+netflix_df = standardize_and_clean_data(netflix_df)
 
 # Step 5: Validate Data
 # Ensure 'Rating' is within the 0-10 range
