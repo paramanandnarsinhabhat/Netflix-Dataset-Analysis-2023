@@ -57,4 +57,9 @@ netflix_df['Genre'] = netflix_df['Genre'].apply(parse_genre)
 # Ensure 'Rating' is within the 0-10 range
 netflix_df = netflix_df[(netflix_df['Rating'] >= 0) & (netflix_df['Rating'] <= 10)]
 
-#
+## Ensure 'Hours Viewed' and 'Number of Ratings' are non-negative
+netflix_df = netflix_df[(netflix_df['Hours Viewed'] >= 0) & (netflix_df['Number of Ratings'] >= 0)]
+
+# Check the transformations and the data
+transformed_genre_head = netflix_df.head()
+transformed_genre_head, netflix_df.isnull().sum()
