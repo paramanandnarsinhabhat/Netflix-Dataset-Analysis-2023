@@ -8,5 +8,11 @@ from utils.data_utils import load_data
 
 file_path = '/Users/paramanandbhat/Downloads/total_netflix_2023 new.csv'
 
-df_exploration = load_data(file_path)
-print(df_exploration.head())
+netflix_df = load_data(file_path)
+
+
+# Display the first few rows and summary information about the dataset
+initial_head = netflix_df.head()
+summary_info = netflix_df.info()
+print(initial_head)
+print(summary_info)
