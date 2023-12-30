@@ -23,3 +23,6 @@ netflix_df['Rating'] = pd.to_numeric(netflix_df['Rating'], errors='coerce')
 # Step 2: Standardize Text and Categorical Data
 # For 'Available Globally?', convert 'Yes' to True and anything else to False
 netflix_df['Available Globally?'] = netflix_df['Available Globally?'].map({'Yes': True, 'No': False})
+
+# We will inspect the first few rows to ensure transformations have been done correctly
+transformed_head = netflix_df.head()
