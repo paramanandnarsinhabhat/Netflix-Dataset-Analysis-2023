@@ -39,3 +39,17 @@ numeric_columns = ['Hours Viewed', 'Number of Ratings', 'Rating']
 for column in numeric_columns:
     median_value = netflix_df[column].median()
     netflix_df[column].fillna(median_value, inplace=True)
+# Since 'Release Date' has a significant number of missing values, we'll leave them as NaN for now
+# They could be imputed later if they are required for time-series analysis
+# Step 4: Clean Genre Column
+# We'll define a function to parse the 'Genre' column into actual lists
+def parse_genre(genre_str):
+    # Removing quotes and square brackets
+    genre_str = genre_str.strip("[]")
+    # Splitting the string into a list at commas not followed by a space (to avoid splitting on commas within genres)
+    genres = [genre.strip("' ") for genre in genre_str.split(",")]
+    return genres
+
+# Apply the parsing function to the 'Genre' column
+netflix_df['Genre'] = netflix_df['Genre'].apply(parse_genre)
+
