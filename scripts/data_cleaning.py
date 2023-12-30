@@ -95,3 +95,12 @@ upper_bound = Q3 + 1.5 * IQR
 # Filter out the outliers
 outliers = netflix_df[(netflix_df['Rating'] < lower_bound) | (netflix_df['Rating'] > upper_bound)]
 non_outliers = netflix_df[(netflix_df['Rating'] >= lower_bound) & (netflix_df['Rating'] <= upper_bound)]
+
+# We now have a DataFrame without outliers in 'Rating'
+netflix_df_cleaned = non_outliers
+
+# Show the number of outliers detected and the first few rows of the cleaned dataframe
+num_outliers = outliers.shape[0]
+cleaned_head = netflix_df_cleaned.head()
+
+num_outliers, cleaned_head
