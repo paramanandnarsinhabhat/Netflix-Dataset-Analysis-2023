@@ -104,3 +104,4 @@ num_outliers = outliers.shape[0]
 cleaned_head = netflix_df_cleaned.head()
 
 num_outliers, cleaned_head
+
