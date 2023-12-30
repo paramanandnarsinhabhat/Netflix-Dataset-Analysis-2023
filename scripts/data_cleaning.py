@@ -63,3 +63,13 @@ netflix_df = netflix_df[(netflix_df['Hours Viewed'] >= 0) & (netflix_df['Number 
 # Check the transformations and the data
 transformed_genre_head = netflix_df.head()
 transformed_genre_head, netflix_df.isnull().sum()
+
+# Additional preprocessing steps:
+
+# Step 6: Extract Additional Information from 'Release Date'
+# We'll extract year, month, and day as new columns, which can be useful for time-based analysis later.
+netflix_df['Year'] = netflix_df['Release Date'].dt.year
+netflix_df['Month'] = netflix_df['Release Date'].dt.month
+netflix_df['Day'] = netflix_df['Release Date'].dt.day
+
+
