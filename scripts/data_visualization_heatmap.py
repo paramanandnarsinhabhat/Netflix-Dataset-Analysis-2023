@@ -4,10 +4,12 @@ import seaborn as sns
 
 cleaned_data_path = '/Users/paramanandbhat/Downloads/netflix_data_cleaned.csv'
 netflix_df = pd.read_csv(cleaned_data_path)
+# Drop rows where 'Release Date' is NaN
+netflix_df = netflix_df.dropna(subset=['Release Date'])
 
 # Convert 'Release Date' to datetime and extract year and month
 netflix_df['Release Date'] = pd.to_datetime(netflix_df['Release Date'])
-netflix_df['Year'] = netflix_df['Release Date'].dt.year
+netflix_df['Year'] = netflix_df['Release Date'].dt.year.astype(int)  # Convert year to integer
 netflix_df['Month'] = netflix_df['Release Date'].dt.month
 
 # Create a pivot table for the heatmap
@@ -20,4 +22,3 @@ plt.title('Heatmap of Netflix Titles Released by Month and Year')
 plt.xlabel('Month')
 plt.ylabel('Year')
 plt.show()
-
