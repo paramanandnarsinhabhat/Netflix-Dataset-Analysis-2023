@@ -26,3 +26,6 @@ netflix_df['Available Globally?'] = netflix_df['Available Globally?'].map({'Yes'
 
 # We will inspect the first few rows to ensure transformations have been done correctly
 transformed_head = netflix_df.head()
+
+# We also check for any null values which may have been introduced during conversion
+missing_values_after_conversion = netflix_df.isnull().sum()
