@@ -8,32 +8,87 @@ This project focuses on analyzing the Netflix dataset for the year 2010 to 2023.
 The dataset used in this project is titled `total_netflix_2023.csv` and includes information on various Netflix titles, their release dates, viewership hours, ratings, and other relevant details.
 
 ## Repository Structure
-```
 Netflix-Dataset-Analysis-2023/
 │
 ├── data/
-│   ├── raw/
-│   │   └── total_netflix_2023.csv
-│   └── processed/
-│       └── netflix_data_cleaned.csv
+│   ├── processed/
+│   │   └── netflix_data_cleaned.csv
+│   └── raw/
+│       └── total_netflix_2023 new.csv
+│
+├── myenv/
+│   ├── bin/
+│   ├── include/
+│   ├── lib/
+│   └── pyvenv.cfg
 │
 ├── notebooks/
-│   └── Netflix_Data_Analysis.ipynb
+│   └── Netflix_notebook.ipynb
 │
 ├── scripts/
-│   ├── data_preprocessing.py
-│   └── analysis_helpers.py
+│   ├── __init__.py
+│   ├── data_cleaning.py
+│   ├── data_loading.py
+│   ├── data_visualization_bar_chart.py
+│   ├── data_visualization_box_plot.py
+│   ├── data_visualization_genreratings.py
+│   ├── data_visualization_heatmap.py
+│   ├── data_visualization_scatterplotsratingvsviewer.py
+│   └── data_visualization_stacked_bar_chart.py
 │
-├── results/
-│   ├── figures/
-│   │   ├── viewership_trends.png
-│   │   └── rating_distribution.png
-│   └── summary_report.md
+├── utils/
+│   ├── __init__.py
+│   └── data_utils.py
 │
 ├── .gitignore
-├── requirements.txt
-└── README.md
-```
+├── README.md
+└── requirements.txt
+
+# Project File Structure
+
+This section outlines the organization of the project repository and provides a description for each component.
+
+## data
+Contains raw and processed datasets.
+
+- `/raw`: Includes the original dataset files as they were obtained.
+  - `total_netflix_2023 new.csv`: Original dataset with Netflix titles for the year 2023.
+
+- `/processed`: Contains datasets that have been cleaned and processed.
+  - `netflix_data_cleaned.csv`: Cleaned version of the Netflix dataset, ready for analysis.
+
+## myenv
+Python virtual environment folder containing all the necessary packages and their versions.
+
+## notebooks
+Jupyter notebooks with detailed code, output, and explanations for analysis and visualization.
+
+- `Netflix_notebook.ipynb`: Jupyter notebook containing the exploratory data analysis and visualization code.
+
+## scripts
+Python scripts for data processing and visualization.
+
+- `data_cleaning.py`: Script for cleaning the dataset.
+- `data_loading.py`: Script for loading the dataset.
+- `data_visualization_bar_chart.py`: Script for creating bar chart visualizations.
+- `data_visualization_box_Plot.py`: Script for creating box plot visualizations.
+- `data_visualization_genreratings.py`: Script for generating genre ratings visualizations.
+- `data_visualization_heatmap.py`: Script for creating heatmap visualizations.
+- `data_visualization_scatterplotsratingvsviewer...`: Script for creating scatter plots of ratings vs. viewership hours.
+- `data_visualization_stacked_bar_chart.py`: Script for creating stacked bar chart visualizations.
+- `data_visualization_viewershiphours.py`: Script for creating viewership hours visualizations.
+
+## utils
+Utility functions used across the project.
+
+- `data_utils.py`: Contains utility functions for data loading, cleaning, and saving.
+
+## Root Directory Files
+
+- `.gitignore`: Specifies intentionally untracked files to ignore by Git.
+- `readme.md`: Markdown file with a detailed description of the project, its structure, setup instructions, and usage.
+- `requirements.txt`: Contains a list of items to be installed using `pip install -r requirements.txt`.
+
 
 ## Tools and Technologies
 - Python
@@ -177,12 +232,6 @@ Disparities in Genre Watch-Time: An In-Depth Look at Netflix Viewership Hours
 6. **Potential for Audience Expansion**: The genres with lower viewership hours present an opportunity for Netflix to expand its audience by investing in content that can attract more viewers or by promoting existing content to wider audiences.
 
 7. **Strategic Content Placement**: The distribution of viewership hours by genre could inform Netflix's content strategy, highlighting which genres might benefit from further investment and development.
-
-
-
-
-
-
 
 
 ## Contributing
