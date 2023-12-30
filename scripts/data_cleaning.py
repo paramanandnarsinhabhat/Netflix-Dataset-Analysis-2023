@@ -14,3 +14,8 @@ netflix_df = load_data(file_path)
 
 # Convert 'Release Date' to datetime
 netflix_df['Release Date'] = pd.to_datetime(netflix_df['Release Date'], errors='coerce')
+
+# Convert 'Hours Viewed', 'Number of Ratings', and 'Rating' to numeric types
+netflix_df['Hours Viewed'] = pd.to_numeric(netflix_df['Hours Viewed'], errors='coerce')
+netflix_df['Number of Ratings'] = pd.to_numeric(netflix_df['Number of Ratings'], errors='coerce')
+netflix_df['Rating'] = pd.to_numeric(netflix_df['Rating'], errors='coerce')
