@@ -53,3 +53,8 @@ def parse_genre(genre_str):
 # Apply the parsing function to the 'Genre' column
 netflix_df['Genre'] = netflix_df['Genre'].apply(parse_genre)
 
+# Step 5: Validate Data
+# Ensure 'Rating' is within the 0-10 range
+netflix_df = netflix_df[(netflix_df['Rating'] >= 0) & (netflix_df['Rating'] <= 10)]
+
+#
