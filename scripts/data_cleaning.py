@@ -4,11 +4,12 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from utils.data_utils import load_data
+from utils.data_utils import load_data,convert_data_types
 
 file_path = '/Users/paramanandbhat/Downloads/total_netflix_2023 new.csv'
 
 netflix_df = load_data(file_path)
+netflix_df = convert_data_types(netflix_df)
 
 # Step 1: Convert Data Types
 
