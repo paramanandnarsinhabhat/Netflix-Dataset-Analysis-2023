@@ -72,4 +72,14 @@ netflix_df['Year'] = netflix_df['Release Date'].dt.year
 netflix_df['Month'] = netflix_df['Release Date'].dt.month
 netflix_df['Day'] = netflix_df['Release Date'].dt.day
 
+# For rows with a missing 'Release Date', these new columns will also have NaN values.
+# We'll fill these NaN values with a placeholder (e.g., -1) to indicate missing data.
+netflix_df['Year'].fillna(-1, inplace=True)
+netflix_df['Month'].fillna(-1, inplace=True)
+netflix_df['Day'].fillna(-1, inplace=True)
 
+
+# Step 7: Text Field Cleaning 
+# As the 'Key Words' and 'Description' fields look relatively clean, we will perform simple whitespace stripping.
+netflix_df['Key Words'] = netflix_df['Key Words'].str.strip()
+netflix_df['Description'] = netflix_df['Description'].str.strip()
