@@ -28,3 +28,11 @@ netflix_df = extract_date_components(netflix_df)
 
 netflix_df = detect_outliers(netflix_df, 'Rating')
 
+netflix_df_cleaned = netflix_df
+
+# Step 7 : Save the cleaned data to a CSV file
+cleaned_data_path = '/Users/paramanandbhat/Downloads/netflix_data_cleaned.csv'
+netflix_df_cleaned.to_csv(cleaned_data_path, index=False)
+
+# Return the path to the saved cleaned data file
+print(cleaned_data_path)
