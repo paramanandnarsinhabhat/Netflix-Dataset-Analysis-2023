@@ -83,3 +83,15 @@ netflix_df['Day'].fillna(-1, inplace=True)
 # As the 'Key Words' and 'Description' fields look relatively clean, we will perform simple whitespace stripping.
 netflix_df['Key Words'] = netflix_df['Key Words'].str.strip()
 netflix_df['Description'] = netflix_df['Description'].str.strip()
+
+# Step 8: Check for Outliers 
+# We can perform a simple check for outliers in the numerical data using the IQR (Interquartile Range) method.
+Q1 = netflix_df['Rating'].quantile(0.25)
+Q3 = netflix_df['Rating'].quantile(0.75)
+IQR = Q3 - Q1
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+
+# Filter out the outliers
+outliers = netflix_df[(netflix_df['Rating'] < lower_bound) | (netflix_df['Rating'] > upper_bound)]
+non_outliers = netflix_df[(netflix_df['Rating'] >= lower_bound) & (netflix_df['Rating'] <= upper_bound)]
